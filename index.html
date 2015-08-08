@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <head>
   <meta charset="utf-8"/>
-  <title>Tufte CSS</title>
+  <title>Speedcubing Algorithms used by me</title>
   <link rel="stylesheet" href="tufte.css"/>
   <link rel="stylesheet" href="latex.css"/>
+  <link rel="icon" href="img/site-icon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style type="text/css">
    img { mix-blend-mode: multiply; }
@@ -11,23 +12,137 @@
 </head>
 <body>
   <article>
-    <h1>Tufte CSS</h1>
-    <subtitle>Dave Liepmann</subtitle>
+    <h1>Speedcubing Algorithms</h1>
+    <subtitle>Siddharth Kannan</subtitle>
+    <p>
+      <span class="marginnote">Last updated on 8th August, 2015</span>
+    </p>
+
     <section>
-      <p>Tufte CSS provides tools to style web articles using the ideas demonstrated by Edward Tufte's books and handouts. Tufte's style is known for its simplicity, extensive use of sidenotes, tight integration of graphics with text, and carefully chosen typography.</p>
-      <p>The idea is essentially cribbed wholesale from <a href="https://tufte-latex.github.io/tufte-latex/">Tufte-<span class="latex">L<sup>a</sup>T<sub>e</sub>X</span></a> and <a href="http://rmarkdown.rstudio.com/tufte_handout_format.html">R Markdown's Tufte Handout format</a><span class="sidenote-number"></span>.<span class="sidenote">This page was in fact originally an adaptation of the <a href="http://rmarkdown.rstudio.com/examples/tufte-handout.pdf">Tufte Handout Example</a> PDF.</span> I give hearty thanks to all the people who have contributed to those projects.</p>
-      <p>If you see anything that Tufte CSS could improve, we welcome your contribution in the form of an issue or pull request on the GitHub project: <a href="https://github.com/daveliepmann/tufte-css">tufte-css</a>. Please note the <a href="https://github.com/daveliepmann/tufte-css#contributing">contribution guidelines</a>.</p>
-      <p>Finally, a reminder about the goal of this project. The web is not print. Webpages are not books. Therefore, the goal of Tufte CSS is not to say "websites should look like this interpretation of Tufte's books" but rather "here are some techniques Tufte developed that we've found useful in print; maybe you can find a way to make them useful on the web". Tufte CSS is merely a sketch of one way to implement this particular set of ideas. It should be a starting point, not a design goal, because any project should present their information as best suits their particular circumstances.</p>
+      <p>
+        This is a set of all the algorithms that work best for me.
+      </p>
+      <p>
+        The sources are :-
+      </p>
+      <p>
+        <a href="https://www.speedsolving.com/wiki/index.php/2-Look_OLL">Speedsolving Wiki's 2-Look OLL</a> <br>
+        <a href="https://www.speedsolving.com/wiki/index.php/PLL">Speedsolving Wiki's PLL Page</a> <br>
+        <a href="badmephisto.com/pll.php">Badmephisto's PLL reference</a> <br>
+        <a href="badmephisto.com/pll.php">Badmephisto's OLL reference</a>
+      </p>
     </section>
 
     <section>
-      <h2>Getting Started</h2>
-      <p>To use Tufte CSS, copy <span class="code">tufte.css</span>, <span class="code">ETBembo-RomanLF.ttf</span>, and <span class="code">ETBembo-DisplayItalic.ttf</span> to your project directory and add the following to your HTML document's <span class="code">head</span> block:</p>
+      <h2>Method Overview</h2>
+      <p>
+        I use the <a href="https://www.speedsolving.com/wiki/index.php/CFOP">CFOP</a> method.
+      </p>
+      <p>
+        I sovle the Cross and F2L intuitively, followed by a 2-Look OLL, and a partial PLL. <br>
+        (I am memorising the 4 G Perms, F, V and the N perms.)
+      </p>
+    </section>
 
-      <pre class="code">&lt;link rel="stylesheet"
-      href="tufte.css"/&gt;</pre>
+    <section stage="oell">
+      <h2>2-Look OLL</h2>
+      <h3>Last-Layer Cross</h3>
 
-      <p>Now you just have to use the provided CSS rules, and the Tufte CSS conventions described in this document. For best results, View Source and Inspect Element frequently.</p>
+      <h4>OELL: Orienting Edges of the Last Layer</h4>
+
+      <table>
+        <tr class="render-cube">
+          <td class="cube-image">
+            <img src="img/oell-1.png">
+          </td>
+          <td class="algorithm">
+            F R U R' U' F'
+          </td>
+        </tr>
+        <tr class="render-cube">
+          <td class="cube-image">
+            <img src="img/oell-2.png">
+          </td>
+          <td class="algorithm">
+            F U R U' R' F'
+          </td>
+        </tr>
+        <tr class="render-cube">
+          <td class="cube-image">
+            <img src="img/oell-3.png">
+          </td>
+          <td class="algorithm">
+            F R U R' U' F' U2 F U R U' R' F'
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <section stage="oll">
+      <h2>2-Look OLL</h2>
+      <h3>Last-Layer Corners</h3>
+
+      <h4>COLL: Corners of the Last Layer</h4>
+
+      <table>
+        <tr class="render-cube">
+          <td class="cube-image">
+            <img src="img/coll-1.png">
+          </td>
+          <td class="algorithm">
+            R U R' U R U2 R'
+          </td>
+        </tr>
+        <tr class="render-cube">
+          <td class="cube-image">
+            <img src="img/coll-2.png">
+          </td>
+          <td class="algorithm">
+            R' U' R U' R' U2 R U
+          </td>
+        </tr>
+        <tr class="render-cube">
+          <td class="cube-image">
+            <img src="img/coll-3.png">
+          </td>
+          <td class="algorithm">
+            F R U R' U' R U R' U' R U R' U' F'
+          </td>
+        </tr>
+        <tr class="render-cube">
+          <td class="cube-image">
+            <img src="img/coll-4.png">
+          </td>
+          <td class="algorithm">
+            r U R' U' r' F R F'
+          </td>
+        </tr>
+        <tr class="render-cube">
+          <td class="cube-image">
+            <img src="img/coll-5.png">
+          </td>
+          <td class="algorithm">
+            F' r U R' U' r' F R
+          </td>
+        </tr>
+        <tr class="render-cube">
+          <td class="cube-image">
+            <img src="img/coll-6.png">
+          </td>
+          <td class="algorithm">
+            f R U R' U' f' F R U R' U' F'
+          </td>
+        </tr>
+        <tr class="render-cube">
+          <td class="cube-image">
+            <img src="img/coll-7.png">
+          </td>
+          <td class="algorithm">
+            R2 D R' U2 R D' R' U2 R'
+          </td>
+        </tr>
+      </table>
+
     </section>
 
     <section>
@@ -62,7 +177,7 @@
     <section>
       <h2>Figures</h2>
       <p>Tufte emphasizes tight integration of graphics with text. Data, graphs, and figures are kept with the text that discusses them. In print, this means they are not relegated to a separate page. On the web, that means readability of graphics and their accompanying text without extra clicks, tab-switching, or scrolling.</p>
-      <p><span class="marginnote"><img src="figure1.png"/>Figure 1: Sepal length vs. petal length, colored by species</span>Images and graphics play an integral role in Tufte’s work. To place figures in the margin, just wrap an image (or whatever) in a margin note inside a <span class="code">p</span> tag, as seen in Figure 1 to the right of this paragraph.</p>      
+      <p><span class="marginnote"><img src="figure1.png"/>Figure 1: Sepal length vs. petal length, colored by species</span>Images and graphics play an integral role in Tufte’s work. To place figures in the margin, just wrap an image (or whatever) in a margin note inside a <span class="code">p</span> tag, as seen in Figure 1 to the right of this paragraph.</p>
       <p>If you need a full-width figure, give it the <span class="code">fullwidth</span> class. Make sure that's inside an <span class="code">article</span>, and it will take up (almost) the full width of the screen. Don't wrap the figure in a paragraph tag. To give it a caption, use a <span class="code">figcaption</span> tag inside the <span class="code">figure</span> tag. This approach is demonstrated in Figure 2, which I suppose plots the data in the following code:</p>
       <p class="code">qplot(wt, mpg, data = mtcars, colour = factor(cyl))</p>
       <figure class="fullwidth">
@@ -137,5 +252,27 @@ for (i = 0; i++; i <= num) {
       <p>If you need to display mathematical symbols and equations, I hear <a href="http://www.mathjax.org/">MathJax</a> is good. Otherwise the topic is outside the scope of this document.</p>
     </section>
   </article>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('tr.render-cube').each(function () {
+        if ($(this).children('td.cube-image').first()
+              .children('img').first().attr('src') !== '') {
+          return;
+        }
+        var alg = $(this).children('td.algorithm').first().html();
+        alg = alg.replace(/\s+/g, '')
+
+        var stage = $(this).closest('section').first().attr('stage');
+
+        var src = "http://cube.crider.co.uk/visualcube.php?size=200&case=" +
+                    encodeURIComponent(alg) +
+                    "&fmt=png&view=plan&stage=" +
+                    stage;
+
+        $(this).children('td.cube-image').first().children('img').first().attr('src', src);
+      })
+    });
+  </script>
 </body>
 </html>
